@@ -1,4 +1,10 @@
 <ul>
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Runner Ducks", runner_ducks_path %></li>
+  <% Site.all.each do |site| %>
+    <li><%= link_to site.title, site_path(site) %></li>
+  <% end %>
 </ul>
+
+<%= form_for Site.new do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
