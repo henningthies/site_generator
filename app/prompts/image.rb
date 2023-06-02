@@ -3,7 +3,7 @@ module Image
 
   def prompt(site)
     <<~PROMPT
-      Image about "#{site.title}" full body outsite shot.
+      Image about "#{site.title}" comic style no text.
     PROMPT
   end
 end

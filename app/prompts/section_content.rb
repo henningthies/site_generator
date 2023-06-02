@@ -6,7 +6,6 @@ module SectionContent
       model: "gpt-3.5-turbo",
       messages: [
         {role: "system", content: <<~SYSTEM
-          
           You are a website SEO expert.
           
           Given a single page website with multiple sections. Provide content related to the given section.
@@ -25,8 +24,7 @@ module SectionContent
         TEXT
          }
       ],
-      temperature: 0.7,
-      max_tokens: 2000
+      temperature: 0.7
     }
   end
 end
